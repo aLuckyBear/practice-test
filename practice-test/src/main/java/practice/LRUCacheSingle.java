@@ -47,12 +47,11 @@ public class LRUCacheSingle {
     }
 
     public void put(String data) {
-        
+
     }
 
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
-
     }
 
 
