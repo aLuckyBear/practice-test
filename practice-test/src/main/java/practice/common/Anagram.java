@@ -7,6 +7,7 @@ import java.util.Map;
  * @author ：shujie
  * @date ：2019/12/16
  * @description: 有效的字母异位词
+ * 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词
  */
 public class Anagram {
     public boolean isAnagram(String s, String t) {
@@ -49,6 +50,12 @@ public class Anagram {
         return true;
     }
 
+    /**
+     * 利用题目中字母的条件，ascii码只有256位。
+     * @param s
+     * @param t
+     * @return
+     */
     public boolean isAnagram2(String s, String t) {
         if (s.length() != t.length()) {
             return false;

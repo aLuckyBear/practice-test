@@ -1,4 +1,4 @@
-package practice;
+package practice.lru;
 
 import org.apache.commons.lang3.StringUtils;
 

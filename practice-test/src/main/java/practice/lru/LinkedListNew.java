@@ -1,4 +1,4 @@
-package practice;
+package practice.lru;
 
 /**
  * @author ：shujie
