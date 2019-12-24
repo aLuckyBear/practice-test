@@ -82,6 +82,8 @@ public class LRUCacheDouble {
         node.key = key;
         node.value = value;
 
+        map.put(key, node);
+
         // LRU未满，直接移到头部
         if (count < capacity) {
             this.moveToHead(node);
