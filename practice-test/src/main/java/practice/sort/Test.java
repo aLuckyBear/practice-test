@@ -13,11 +13,13 @@ import java.util.LinkedList;
 public class Test {
     public static void main(String[] args) {
         int[] array = new int[1];
-        array[0] = 1;
         System.out.println("array = " + JSON.toJSONString(array));
 
         LinkedList list = new LinkedList();
         list.size();
+
+        int length = array.length;
+
 
     }
 }
