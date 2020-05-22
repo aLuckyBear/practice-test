@@ -39,7 +39,7 @@ public class BinarySearch {
      * @param target
      * @return
      */
-    public int binarySearch2(int[] nums, int target) {
+    public int searchLeft(int[] nums, int target) {
         if (nums.length == 0) {
             return -1;
         }
@@ -73,7 +73,7 @@ public class BinarySearch {
      * @param target
      * @return
      */
-    public int binarySearch3(int[] nums, int target) {
+    public int searchRight(int[] nums, int target) {
         if (nums.length == 0) {
             return -1;
         }
@@ -102,9 +102,9 @@ public class BinarySearch {
 
     /**
      * 给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。
-     *
+     * <p>
      * 你的算法时间复杂度必须是 O(log n) 级别。
-     *
+     * <p>
      * 如果数组中不存在目标值，返回 [-1, -1]。
      *
      * @param nums
@@ -112,6 +112,63 @@ public class BinarySearch {
      * @return
      */
     public int[] searchRange(int[] nums, int target) {
-        return null;
+        int[] array = {-1, -1};
+        array[0] = searchLeft(nums, target);
+        array[1] = searchRight(nums, target);
+        return array;
+    }
+
+    public static void main(String[] args) {
+        ListNode listNode1 = new ListNode(1);
+        ListNode listNode2 = new ListNode(2);
+
+        ListNode listNode = listNode1;
+
+        listNode1 = listNode2;
+
+//        System.out.println("listNode = " + JSON.toJSONString(listNode));
+
+        int a = -1;
+        int b = 1;
+
+        int result = a ^ b;
+        System.out.println("result = " + Integer.toBinaryString(result));
+        int count = 0;
+        while (result != 0) {
+            if (result % 2 != 0) {
+                count++;
+            }
+            result = result >>> 1;
+            System.out.println("result = " + Integer.toBinaryString(result));
+        }
+
+        System.out.println("count = " + count);
+    }
+
+
+}
+
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int val) {
+        this.val = val;
+    }
+
+    public int getVal() {
+        return val;
+    }
+
+    public void setVal(int val) {
+        this.val = val;
+    }
+
+    public ListNode getNext() {
+        return next;
+    }
+
+    public void setNext(ListNode next) {
+        this.next = next;
     }
 }

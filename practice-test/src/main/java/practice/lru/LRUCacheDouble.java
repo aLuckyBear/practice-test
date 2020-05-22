@@ -41,7 +41,7 @@ public class LRUCacheDouble {
 
     public LRUCacheDouble(int capacity) {
         this.capacity = capacity;
-        map = new HashMap<Integer, Node>(capacity * 2);
+        map = new HashMap<>(capacity * 2);
 
         head = new Node();
         head.pre = null;
@@ -87,7 +87,7 @@ public class LRUCacheDouble {
         // LRU未满，直接移到头部
         if (count < capacity) {
             this.moveToHead(node);
-            count ++;
+            count++;
             return;
         }
 
